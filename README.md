@@ -8,7 +8,7 @@ integrating 3D product visualization, high-fidelity UI constraints, and bleeding
 ## 📸 Screenshots
 <div align="center">
   <img src="./public/screenshots/hero_webgl.png" width="48%" alt="Hero Section" />
-  <img src="./public/screenshots/grid_webgl.png" width="48%" alt="Product Grid" />
+  <img src="./public/screenshots/grid_pro.png" width="48%" alt="Product Grid" />
 </div>
 
 ## ✨ Signature Features
