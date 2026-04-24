@@ -1,14 +1,14 @@
 # ShoeFusion Remastered
 
-![Hero View](./public/screenshots/hero_final.png)
+![Hero View](./public/screenshots/hero_webgl.png)
 
 ShoeFusion Remastered is a cutting-edge next-generation e-commerce platform pushing the boundaries of web experiences through an uncompromising Monochrome Brutalist aesthetic. The application utilizes a highly aggressive minimalist architecture, 
 integrating 3D product visualization, high-fidelity UI constraints, and bleeding-edge front-end technologies to deliver a deeply immersive, zero-distraction fashion shopping experience.
 
 ## 📸 Screenshots
 <div align="center">
-  <img src="./public/screenshots/hero_final.png" width="48%" alt="Hero Section" />
-  <img src="./public/screenshots/grid_final.png" width="48%" alt="Product Grid" />
+  <img src="./public/screenshots/hero_webgl.png" width="48%" alt="Hero Section" />
+  <img src="./public/screenshots/grid_webgl.png" width="48%" alt="Product Grid" />
 </div>
 
 ## ✨ Signature Features
