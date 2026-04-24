@@ -28,3 +28,13 @@ next-env.d.ts
 android
 sf14.rar
 Shoe_Fusion.zip
+
+# database backups
+*.sql
+*.bak
+*.sqlite
+*.sqlite3
+*.dump
+supabase/backups/
+*.backup
+*.backup.gz

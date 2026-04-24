@@ -200,18 +200,20 @@ export default function CustomizePage() {
 
         {/* Controls */}
         <div className="lg:col-span-1 order-1 lg:order-2">
-          <Card>
-            <CardHeader className="bg-blue-600 text-white">
-              <CardTitle>Customize</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6 space-y-6">
+          <Card className="glassmorphism-card border-0 shadow-soft-xl overflow-hidden">
+            <div className="bg-gradient-to-r from-primary-600 to-primary-500 text-white pb-0">
+              <CardHeader>
+                <CardTitle>Customize Design</CardTitle>
+              </CardHeader>
+            </div>
+            <CardContent className="p-6 space-y-6 pt-6">
               <div>
-                <label className="block mb-1 text-sm font-medium">Design Name</label>
+                <label className="block mb-1 text-sm font-medium text-foreground/90">Design Name</label>
                 <input
                   type="text"
                   value={design.name || ""} // Ensure value is never undefined
                   onChange={handleNameChange}
-                  className="w-full p-2 border rounded-md"
+                  className="input-default"
                 />
               </div>
 
@@ -228,13 +230,13 @@ export default function CustomizePage() {
                 </RadioGroup>
               </div>
 
-              <div className="space-y-4">
-                <Button onClick={handleSaveDesign} className="w-full" disabled={isLoading || !isInitialized}>
-                  {isLoading ? <Loader className="animate-spin h-4 w-4" /> : <Save className="h-4 w-4 mr-2" />}
+              <div className="space-y-4 pt-4">
+                <Button onClick={handleSaveDesign} className="w-full btn-outline" disabled={isLoading || !isInitialized}>
+                  {isLoading ? <Loader className="animate-spin h-4 w-4 mr-2" /> : <Save className="h-4 w-4 mr-2" />}
                   Save Design
                 </Button>
-                <Button onClick={handleAddToCart} className="w-full" disabled={isLoading || !isInitialized}>
-                  {isLoading ? <Loader className="animate-spin h-4 w-4" /> : <ShoppingCart className="h-4 w-4 mr-2" />}
+                <Button onClick={handleAddToCart} className="w-full btn-gradient py-6 text-lg font-bold" disabled={isLoading || !isInitialized}>
+                  {isLoading ? <Loader className="animate-spin h-5 w-5 mr-2" /> : <ShoppingCart className="h-5 w-5 mr-3" />}
                   Add to Cart
                 </Button>
               </div>

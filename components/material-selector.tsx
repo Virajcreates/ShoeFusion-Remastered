@@ -1,8 +1,10 @@
 "use client"
 
+import { useRef } from "react"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
-import { motion } from "framer-motion"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 
 interface MaterialSelectorProps {
   activePart: string
@@ -52,26 +54,24 @@ export default function MaterialSelector({
   // Ensure we have a valid material selected
   const safeMaterial = selectedMaterial || materials[0].value
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
+  const containerRef = useRef<HTMLDivElement>(null)
 
-  const item = {
-    hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0 },
-  }
+  useGSAP(() => {
+    gsap.from(".material-item", {
+      opacity: 0,
+      y: 10,
+      duration: 0.3,
+      stagger: 0.05,
+      ease: "power2.out",
+      clearProps: "all"
+    })
+  }, { scope: containerRef, dependencies: [activePart] })
 
   return (
-    <motion.div variants={container} initial="hidden" animate="show">
+    <div ref={containerRef}>
       <RadioGroup value={safeMaterial} onValueChange={onChange} className="space-y-3">
         {materials.map((material) => (
-          <motion.div key={material.value} variants={item}>
+          <div key={material.value} className="material-item">
             <div
               className={`flex items-center space-x-3 border p-3 rounded-lg transition-all duration-200 cursor-pointer ${
                 safeMaterial === material.value ? "border-primary bg-primary/5" : "hover:border-gray-400"
@@ -86,9 +86,9 @@ export default function MaterialSelector({
                 <p className="text-xs text-muted-foreground mt-0.5">{material.description}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </RadioGroup>
-    </motion.div>
+    </div>
   )
 }

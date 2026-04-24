@@ -290,11 +290,11 @@ export default function AboutPage() {
           </Tabs>
         </section>
 
-        {/* CTA Section */}
-        <section className="relative rounded-2xl overflow-hidden">
+        <section className="relative rounded-2xl overflow-hidden border border-white/5">
           <div className="absolute inset-0">
-            <Image src="/placeholder.svg?height=400&width=1200" alt="Custom shoes" fill className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90 mix-blend-multiply"></div>
+            <Image src="/cta_bg.png" alt="Custom shoes futuristic macro" fill className="object-cover" />
+            <div className="absolute inset-0 bg-[#040405]/70 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#040405] via-transparent to-[#040405] opacity-90"></div>
           </div>
           <div className="relative py-16 px-6 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Design Your Perfect Shoes?</h2>

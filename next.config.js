@@ -5,10 +5,6 @@ const nextConfig = {
     domains: ["blob.v0.dev"],
     unoptimized: true,
   },
-  // Ensure we're using the latest features
-  experimental: {
-    serverActions: true,
-  },
   // Optimize for production
   compiler: {
     removeConsole:
@@ -19,7 +15,6 @@ const nextConfig = {
         : false,
   },
   // Improve build performance
-  swcMinify: true,
   eslint: {
     ignoreDuringBuilds: true,
   },

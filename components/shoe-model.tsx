@@ -26,15 +26,5 @@ export function ShoeModel({ design, highlight, fallbackToEnhanced = true }: Shoe
     return <EnhancedShoeModel design={design} highlight={highlight} />
   }
 
-  return (
-    <Suspense
-      fallback={
-        <div className="flex items-center justify-center h-full">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
-        </div>
-      }
-    >
-      <GLTFShoeModel design={design} highlight={highlight} onError={() => setModelError(true)} />
-    </Suspense>
-  )
+  return <GLTFShoeModel design={design} highlight={highlight} onError={() => setModelError(true)} />
 }

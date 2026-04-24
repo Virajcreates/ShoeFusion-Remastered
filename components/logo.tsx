@@ -8,7 +8,7 @@ interface LogoProps {
   href?: string
 }
 
-export function Logo({ className, size = "md", variant = "default", href = "/home" }: LogoProps) {
+export function Logo({ className, size = "md", variant = "default", href = "/" }: LogoProps) {
   const sizeClasses = {
     sm: "h-8",
     md: "h-10",
